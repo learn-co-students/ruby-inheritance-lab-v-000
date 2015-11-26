@@ -17,4 +17,31 @@ some_knowledge = avi.teach
 
 steve.learn(some_knowledge)
 
-puts "Steve just learned this important knowledge: '#{steve.knowledge.first}' from Avi"
+more_knowledge = avi.teach
+
+steve.learn(more_knowledge)
+
+aaron = Student.new
+aaron.first_name = "Aaron"
+aaron.last_name = "Mahan"
+
+lesson_one = avi.teach
+
+aaron.learn(lesson_one)
+
+lesson_two = avi.teach
+aaron.learn(lesson_two)
+
+Student.all.each do |student|
+  puts "#{student.first_name} just learned this important knowledge: '#{student.knowledge.join("; ")}' from Avi."
+end
+
+#puts "Steve just learned this important knowledge: '#{steve.knowledge.first}' from Avi"
+
+# jim = User.new
+# jim.first_name = "Jim"
+# jim.last_name = "Bob"
+
+# more_knowledge = avi.teach
+
+# jim.learn(more_knowledge)
