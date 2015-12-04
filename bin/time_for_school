@@ -12,9 +12,26 @@ avi = Teacher.new
 avi.first_name = "Avi"
 avi.last_name = "Flombom"
 
+scotty = Student.new
+scotty.first_name = "Scotty"
+scotty.last_name = "Runyan"
+
+jim = User.new
+jim.first_name = "Jim"
+jim.last_name = "Johnson"
+
 
 some_knowledge = avi.teach 
 
 steve.learn(some_knowledge)
 
+# learn cannot be called on jim since #learn is an instance method of the Student class
+# jim.learn(some_knowledge)
+
+2.times { scotty.learn(avi.teach) }
+
 puts "Steve just learned this important knowledge: '#{steve.knowledge.first}' from Avi"
+
+scotty.knowledge.each do |fact|
+  puts "Scotty learned #{fact} from Avi."
+end
