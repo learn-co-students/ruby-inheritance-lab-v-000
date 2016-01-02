@@ -12,9 +12,14 @@ avi = Teacher.new
 avi.first_name = "Avi"
 avi.last_name = "Flombom"
 
+jim = User.new
+jim.first_name = "Jim"
+jim.last_name = "Bob"
 
 some_knowledge = avi.teach 
 
-steve.learn(some_knowledge)
+3.times do 
+  steve.learn(avi.teach)
+end
 
-puts "Steve just learned this important knowledge: '#{steve.knowledge.first}' from Avi"
+steve.knowledge.each { |nugget| puts "#{steve.first_name} just learned #{nugget}!"}
