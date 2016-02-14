@@ -12,9 +12,21 @@ avi = Teacher.new
 avi.first_name = "Avi"
 avi.last_name = "Flombom"
 
+jim = Student.new
+jim.first_name = "Jim"
+jim.last_name = "Holiday"
 
-some_knowledge = avi.teach 
+some_knowledge = avi.teach
+more_knowledge = avi.teach
+great_knowledge = avi.teach
+such_knowledge = avi.teach
+
+jim.learn(great_knowledge)
+jim.learn(such_knowledge)
 
 steve.learn(some_knowledge)
+steve.learn(more_knowledge)
 
-puts "Steve just learned this important knowledge: '#{steve.knowledge.first}' from Avi"
+steve.knowledge.each {|info| puts "Steve just learned this important knowledge: '#{info}' from Avi" }
+
+jim.knowledge.each {|info| puts "Jim just learned this important knowledge: '#{info}' from Avi" }
