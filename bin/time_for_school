@@ -8,6 +8,17 @@ steve = Student.new
 steve.first_name = "Steve"
 steve.last_name = "Jobs"
 
+jim = User.new
+jim.first_name = "Jim"
+jim.last_name = "Kirk"
+
+mary = Student.new
+mary.first_name = "MaryJane"
+mary.last_name = "Potter"
+
+
+
+
 avi = Teacher.new
 avi.first_name = "Avi"
 avi.last_name = "Flombom"
@@ -15,6 +26,10 @@ avi.last_name = "Flombom"
 
 some_knowledge = avi.teach 
 
-steve.learn(some_knowledge)
 
-puts "Steve just learned this important knowledge: '#{steve.knowledge.first}' from Avi"
+mary.learn(some_knowledge)
+puts "Mary was impressed with Avi's awareness of #{mary.knowledge}."
+
+steve.learn(some_knowledge)
+#jim.learn(some_knowledge)
+puts "Steve just learned this important knowledge: '#{steve.knowledge}' from Avi"
