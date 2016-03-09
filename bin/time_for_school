@@ -12,9 +12,10 @@ avi = Teacher.new
 avi.first_name = "Avi"
 avi.last_name = "Flombom"
 
-
-some_knowledge = avi.teach 
-
+5.times do
+some_knowledge = avi.teach
 steve.learn(some_knowledge)
+end
 
 puts "Steve just learned this important knowledge: '#{steve.knowledge.first}' from Avi"
+puts "Steve knows all these things: #{steve.knowledge}."
