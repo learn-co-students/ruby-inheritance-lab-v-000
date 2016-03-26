@@ -1,22 +1,17 @@
 class Student < User
 
-  attr_accessor :first_name, :last_name
+attr_accessor :knowledge
+
   def initialize
-  @first_name = first_name
-  @last_name = last_name
-end
-
-  KNOWLEDGE = Array.new
-
-def new 
-
+    @knowledge = []
   end
 
+  def learn(knowledge)
+    @knowledge << knowledge
+  end
 
-  def learn 
-  end 
-
-def knowledge
-end
+  def knowledge
+    @knowledge
+  end
 
 end
