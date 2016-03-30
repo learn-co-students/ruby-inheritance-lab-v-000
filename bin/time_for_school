@@ -18,3 +18,13 @@ some_knowledge = avi.teach
 steve.learn(some_knowledge)
 
 puts "Steve just learned this important knowledge: '#{steve.knowledge.first}' from Avi"
+
+steve.learn(some_knowledge)
+puts "Steve now learned: '#{steve.knowledge.first}' from Avi"
+
+
+# jim = User.new
+# jim.first_name = "Jim"
+# jim.last_name = "Halpert"
+# jim.learn(some_knowledge)
+# undefined method 'learn' for jim instance - User class doesn't have #learn and doesn't inherit from Student.
