@@ -3,6 +3,7 @@
 require_relative "../lib/user.rb"
 require_relative "../lib/teacher.rb"
 require_relative "../lib/student.rb"
+require_relative "../lib/auditor.rb"
 
 steve = Student.new
 steve.first_name = "Steve"
@@ -17,4 +18,44 @@ some_knowledge = avi.teach
 
 steve.learn(some_knowledge)
 
-puts "Steve just learned this important knowledge: '#{steve.knowledge.first}' from Avi"
+puts "#{steve.first_name} just learned this important knowledge:"
+puts "'#{steve.knowledge.first}' from #{avi.first_name}"
+
+jim = Auditor.new
+jim.first_name = "Jim"
+jim.last_name = "Horning"
+
+more_knowledge = avi.teach
+
+steve.learn(more_knowledge)
+jim.learn(more_knowledge)
+
+puts "#{steve.first_name} just learned this important knowledge:"
+puts "'#{steve.knowledge[1]}' from #{avi.first_name}"
+puts "#{jim.first_name} just learned this important knowledge:"
+puts "'#{jim.knowledge.first}' from #{avi.first_name}"
+
+ed = Student.new
+ed.first_name = "Ed"
+ed.last_name = "Karabinus"
+
+ed.learn(some_knowledge)
+ed.learn(more_knowledge)
+
+puts "#{ed.first_name} just learned this important knowledge:"
+puts "'#{ed.knowledge.first}' from #{avi.first_name}"
+puts "#{ed.first_name} just learned this important knowledge:"
+puts "'#{ed.knowledge[1]}' from #{avi.first_name}"
+
+puts "#{steve.first_name} learned:"
+steve.knowledge.each_with_index do |knowledge, index|
+  puts "#{index + 1}. #{knowledge}"
+end
+puts "#{jim.first_name} learned:"
+jim.knowledge.each_with_index do |knowledge, index|
+  puts "#{index + 1}. #{knowledge}"
+end
+puts "#{ed.first_name} learned:"
+ed.knowledge.each_with_index do |knowledge, index|
+  puts "#{index + 1}. #{knowledge}"
+end
