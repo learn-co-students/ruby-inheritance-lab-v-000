@@ -12,9 +12,14 @@ avi = Teacher.new
 avi.first_name = "Avi"
 avi.last_name = "Flombom"
 
+jim = Student.new
+jim.first_name = "Jim"
+jim.last_name = "Edwards"
 
-some_knowledge = avi.teach 
+3.times {|i| jim.learn(avi.teach)}
+some_knowledge = avi.teach
 
 steve.learn(some_knowledge)
 
 puts "Steve just learned this important knowledge: '#{steve.knowledge.first}' from Avi"
+puts "#{jim.first_name} #{jim.last_name} has learned: #{jim.knowledge} from Avi"
