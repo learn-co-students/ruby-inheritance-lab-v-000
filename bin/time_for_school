@@ -23,3 +23,4 @@ steve.learn(some_knowledge)
 # jim.learn(some_knowledge) #Jim isn't a student and, therefore, can't learn anything :(
 
 puts "Steve just learned this important knowledge: '#{steve.knowledge.first}' from Avi"
+puts steve.knowledge
