@@ -12,9 +12,21 @@ avi = Teacher.new
 avi.first_name = "Avi"
 avi.last_name = "Flombom"
 
+jim = User.new
+jim.first_name = "Jim"
+jim.last_name = "Aires"
 
-some_knowledge = avi.teach 
+carol = Student.new
+carol.first_name = "Carol"
+carol.last_name = "Sagawa"
+
+some_knowledge = avi.teach
 
 steve.learn(some_knowledge)
 
+carol.learn(some_knowledge)
+
+#jim.learn(some_knowledge) User doesn't have Student or Teachar methods.
+
 puts "Steve just learned this important knowledge: '#{steve.knowledge.first}' from Avi"
+puts "#{carol.first_name} just learned this important knowledge: '#{carol.knowledge.last}' from Avi."
