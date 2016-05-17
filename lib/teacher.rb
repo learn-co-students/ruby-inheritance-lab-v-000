@@ -1,4 +1,5 @@
 require_relative './user.rb'
+require 'pry'
 
 class Teacher < User
   attr_reader :knowledge
@@ -8,6 +9,7 @@ class Teacher < User
   end
 
   def teach
+    binding.pry
     @knowledge.sample
   end
 
