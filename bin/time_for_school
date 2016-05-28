@@ -12,9 +12,43 @@ avi = Teacher.new
 avi.first_name = "Avi"
 avi.last_name = "Flombom"
 
+jim = User.new
+jim.first_name = "Jim"
 
-some_knowledge = avi.teach 
+some_knowledge = avi.teach
 
 steve.learn(some_knowledge)
 
 puts "Steve just learned this important knowledge: '#{steve.knowledge.first}' from Avi"
+
+more_knowledge = avi.teach
+some_knowledge = more_knowledge
+steve.learn(some_knowledge)
+puts "Steve just learned another important knowledge: '#{steve.knowledge.last}' from Avi"
+
+yet_more_knowledge = avi.teach
+some_knowledge = yet_more_knowledge
+steve.learn(some_knowledge)
+puts "and learned another important knowledge: '#{steve.knowledge.last}' from Avi"
+
+puts "So far Steve has learned #{steve.knowledge.size} important lessons from Avi"
+
+puts "So far Steve has learned these important lessons from Avi: #{steve.knowledge.join(", ")}."
+
+puts "#{jim.first_name} just signed up to audit some classes."
+
+bob = Student.new
+bob.first_name = "Bob"
+bob.last_name = "Bubbles"
+
+bob.learn(some_knowledge)
+
+puts "#{bob.first_name} just enrolled and learned the same lesson '#{bob.knowledge.first}' as #{steve.first_name}."
+
+# jim.learn(some_knowledge)
+
+# puts "#{jim.first_name} tried to learn something and he could get #{jim.knowledge.size} lessons."
+
+puts "#{steve.first_name}'s knowledge: #{steve.knowledge.join(", ")}."
+puts "#{bob.first_name}'s knowledge: #{steve.knowledge.join(", ")}."
+# puts "#{jim.first_name}'s knowledge: #{jim.knowledge.join(", ")}."
