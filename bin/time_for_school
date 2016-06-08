@@ -18,3 +18,15 @@ some_knowledge = avi.teach
 steve.learn(some_knowledge)
 
 puts "Steve just learned this important knowledge: '#{steve.knowledge.first}' from Avi"
+
+jim = User.new  #doesn't have access to the student method #learn
+jim.first_name = "Jim"
+jim.last_name = "Jones"
+#jim.learn(some_knowledge)
+
+john = Student.new
+john.first_name = "John"
+john.last_name = "Jacob"
+john.learn(some_knowledge)
+
+puts "John just learned this important knowledge: '#{john.knowledge.first}' from Avi"
