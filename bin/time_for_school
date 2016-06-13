@@ -12,9 +12,42 @@ avi = Teacher.new
 avi.first_name = "Avi"
 avi.last_name = "Flombom"
 
+=begin
+jim = User.new
+jim.first_name = "Jim"
+jim.last_name = "Jimanpam"
+=end
 
-some_knowledge = avi.teach 
+some_knowledge = avi.teach
 
 steve.learn(some_knowledge)
 
+=begin
+jim.learn(some_knowledge) *NoMethodError - undefined method 'learn' because parent does not inherit from child
+=end
+
 puts "Steve just learned this important knowledge: '#{steve.knowledge.first}' from Avi"
+
+some_knowledge = avi.teach
+
+steve.learn(some_knowledge)
+
+puts "Steve just learned this important knowledge: '#{steve.knowledge.last}' from Avi"
+
+jake = Student.new
+jake.first_name = "Jake"
+jake.last_name = "The Snake"
+
+knowledge_droppings = avi.teach
+wisdom_pearls = avi.teach
+fact_gem = avi.teach
+
+jake.learn(knowledge_droppings)
+jake.learn(wisdom_pearls)
+jake.learn(fact_gem)
+
+puts "Jake The Snake just learned this important knowledge: '#{jake.knowledge[0]}' from Avi"
+
+
+steve.knows
+jake.knows
