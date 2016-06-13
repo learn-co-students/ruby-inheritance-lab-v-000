@@ -18,7 +18,7 @@ class Student < User
     know = self.knowledge.each do |gem|
       gem
     end
-    puts "#{self.first_name} #{self.last_name} knows #{know} because of Avi."
+    puts "#{self.first_name} #{self.last_name} knows #{know.join(", ")} because of Avi."
   end
 
 end
