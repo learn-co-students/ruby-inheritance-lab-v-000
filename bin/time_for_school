@@ -13,8 +13,28 @@ avi.first_name = "Avi"
 avi.last_name = "Flombom"
 
 
-some_knowledge = avi.teach 
+some_knowledge = avi.teach
+more_knowledge = avi.teach 
 
 steve.learn(some_knowledge)
-
 puts "Steve just learned this important knowledge: '#{steve.knowledge.first}' from Avi"
+
+steve.learn(more_knowledge)
+puts "Steve just learned this important knowledge: '#{steve.knowledge.last}' from Avi"
+
+mike = Student.new
+mike.first_name = "Michael"
+mike.last_name = "Jordan"
+
+mike.learn(some_knowledge)
+puts "Micheal just learned this important knowledge: '#{mike.knowledge.first}' from Avi"
+
+mike.learn(more_knowledge)
+puts "Michael just learned this important knowledge: '#{mike.knowledge.last}' from Avi"
+
+jim = User.new
+jim.first_name = "Jim"
+jim.last_name = "Belushi"
+
+#  jim.learn(some_knowledge) 
+#jim can't learn....he's only auditing....noMethodError
