@@ -8,13 +8,45 @@ steve = Student.new
 steve.first_name = "Steve"
 steve.last_name = "Jobs"
 
+elyse = Student.new
+elyse.first_name = "Elyse"
+elyse.last_name = "Klova"
+
+
 avi = Teacher.new
 avi.first_name = "Avi"
 avi.last_name = "Flombaum"
 
+jim = User.new
+jim.first_name = "Jim"
+jim.last_name = "Bob"
 
-some_knowledge = avi.teach 
+3.times do
+  some_knowledge = avi.teach
+    if steve.knowledge.include?(some_knowledge)
+      until steve.knowledge.include?(new_knowledge) == false
+        new_knowledge = avi.teach
+      end
+      steve.learn(new_knowledge)
+    else
+      steve.learn(some_knowledge)
+    end
+  puts "Steve just learned this important knowledge: '#{steve.knowledge.last}' from Avi"
+end
 
-steve.learn(some_knowledge)
+3.times do
+  some_knowledge = avi.teach
+  if elyse.knowledge.include?(some_knowledge)
+    until elyse.knowledge.include?(new_knowledge) == false
+      new_knowledge = avi.teach
+    end
+    elyse.learn(new_knowledge)
+  else
+    elyse.learn(some_knowledge)
+  end
+  puts "Elyse just learned this important knowledge: '#{elyse.knowledge.last}' from Avi"
+end
 
-puts "Steve just learned this important knowledge: '#{steve.knowledge.first}' from Avi"
+Student.all.each do |student|
+  puts "#{student.first_name} has learned: #{student.knowledge.join("; ")}!"
+end
