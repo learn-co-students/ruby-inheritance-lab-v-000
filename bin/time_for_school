@@ -18,3 +18,19 @@ some_knowledge = avi.teach
 steve.learn(some_knowledge)
 
 puts "Steve just learned this important knowledge: '#{steve.knowledge.first}' from Avi"
+
+# This doesn't work.  NoMethodError.
+# jim = User.new
+# jim.learn(some_knowledge)
+
+steve.learn(avi.teach)
+scott = Student.new
+scott.first_name = "Scott"
+scott.last_name = "Savage"
+scott.learn(avi.teach)
+
+steve.print
+scott.print
+
+
+
