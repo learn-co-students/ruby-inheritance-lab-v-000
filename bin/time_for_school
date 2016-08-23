@@ -13,8 +13,31 @@ avi.first_name = "Avi"
 avi.last_name = "Flombaum"
 
 
-some_knowledge = avi.teach 
+some_knowledge = avi.teach
+more_knowledge = avi.teach
 
+steve.learn(more_knowledge)
 steve.learn(some_knowledge)
 
 puts "Steve just learned this important knowledge: '#{steve.knowledge.first}' from Avi"
+
+#when jim was a User, he could not learn and the error stopped the rest of the file from running.
+jim = Student.new
+jim.first_name = "Jim"
+jim.last_name = "Jacobson"
+
+jim.learn(some_knowledge)
+
+puts "Jim just learned this important knowledge: '#{jim.knowledge.first}' from Avi"
+
+sarah = Student.new
+sarah.first_name = "Sarah"
+sarah.last_name = "Cornelius"
+
+sarah.learn(some_knowledge)
+sarah.learn(more_knowledge)
+
+other_stuff = avi.teach
+
+sarah.learn(other_stuff)
+puts "Sarah learned all of this from Avi: #{sarah.knowledge.join(", ")}!"
