@@ -18,3 +18,26 @@ some_knowledge = avi.teach
 steve.learn(some_knowledge)
 
 puts "Steve just learned this important knowledge: '#{steve.knowledge.first}' from Avi"
+
+more_knowledge = avi.teach
+
+steve.learn(more_knowledge)
+
+puts "Steve has learned more important knowledge: #{steve.knowledge[1]}"
+
+robot_student = Student.new
+robot_student.first_name = "Bot"
+robot_student.last_name = "42"
+
+even_more_knowledge = avi.teach
+robot_student.learn(even_more_knowledge)
+
+puts "Bot 42 has learned something about himself: #{robot_student.knowledge.first}"
+
+steve.knowledge.each do |thing|
+    puts "Steve learned #{thing}."
+end
+
+robot_student.knowledge.each do |thing|
+    puts "Bot 42 learned #{thing}."
+end
