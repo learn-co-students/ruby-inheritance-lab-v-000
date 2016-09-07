@@ -8,12 +8,16 @@ steve = Student.new
 steve.first_name = "Steve"
 steve.last_name = "Jobs"
 
+abigail = Student.new
+abigail.first_name = "Abigail"
+abigail.last_name = "Brand"
+
 avi = Teacher.new
 avi.first_name = "Avi"
 avi.last_name = "Flombaum"
 
 
-some_knowledge = avi.teach 
+some_knowledge = avi.teach
 
 steve.learn(some_knowledge)
 
