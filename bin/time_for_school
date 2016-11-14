@@ -12,9 +12,21 @@ avi = Teacher.new
 avi.first_name = "Avi"
 avi.last_name = "Flombaum"
 
+jim = User.new
+jim.first_name = "Jim"
+jim.last_name = "Dude"
 
-some_knowledge = avi.teach 
+teresa = Student.new
+teresa.first_name = "Teresa"
+teresa.last_name = "Grosch"
 
-steve.learn(some_knowledge)
 
-puts "Steve just learned this important knowledge: '#{steve.knowledge.first}' from Avi"
+def class_time(teacher, student)
+	some_knowledge = teacher.teach
+	student.learn(some_knowledge)
+	puts "#{student.first_name} just learned this important knowledge: '#{student.knowledge.first}' from #{teacher.first_name}"
+end
+
+
+
+class_time(avi, teresa)
