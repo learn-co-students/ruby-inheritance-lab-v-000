@@ -14,7 +14,17 @@ avi.last_name = "Flombaum"
 
 
 some_knowledge = avi.teach 
+some = avi.teach
 
 steve.learn(some_knowledge)
 
 puts "Steve just learned this important knowledge: '#{steve.knowledge.first}' from Avi"
+
+jim = User.new.tap { |a| a.first_name = "Jim"; a.last_name = "Jones" }
+
+steve.learn(some_knowledge)
+kristen = Student.new.tap { |a| a.first_name = "Kristen"; a.last_name = "Warren" }
+kristen.learn(some)
+
+kristen.knowledge.each { |know| puts know }
+steve.knowledge.each { |know| puts know }
