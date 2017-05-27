@@ -12,9 +12,19 @@ avi = Teacher.new
 avi.first_name = "Avi"
 avi.last_name = "Flombaum"
 
+jim = User.new
+jim.first_name = "Jim"
+jim.last_name = "Banana"
+# jim.learn(avi.teach) learn is not defined on User. this will not work
 
-some_knowledge = avi.teach 
+bill = Student.new
+bill.first_name = "Bill"
+bill.last_name = "Gates"
 
-steve.learn(some_knowledge)
+steve.learn(avi.teach)
+steve.learn(avi.teach)
+bill.learn(avi.teach)
+bill.learn(avi.teach)
 
-puts "Steve just learned this important knowledge: '#{steve.knowledge.first}' from Avi"
+steve.knowledge.each { |e| puts "Steve just learned this important knowledge: '#{e}' from Avi"  }
+bill.knowledge.each { |e| puts "Bill just learned this important knowledge: '#{e}' from Avi"  }
