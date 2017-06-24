@@ -4,5 +4,6 @@ class Teacher < User
 
   def teach
     KNOWLEDGE.sample
+    #sample is random selection from array
   end
 end
