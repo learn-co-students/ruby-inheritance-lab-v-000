@@ -8,13 +8,33 @@ steve = Student.new
 steve.first_name = "Steve"
 steve.last_name = "Jobs"
 
+bill = Student.new
+bill.first_name = "Bill"
+bill.last_name = "Gates"
+
+
 avi = Teacher.new
 avi.first_name = "Avi"
 avi.last_name = "Flombaum"
 
 
-some_knowledge = avi.teach 
+some_knowledge = avi.teach
 
-steve.learn(some_knowledge)
+2.times do
+  steve.learn(some_knowledge)
+  bill.learn(some_knowledge)
+end
 
-puts "Steve just learned this important knowledge: '#{steve.knowledge.first}' from Avi"
+steve.knowledge.each do |k|
+  puts k
+end
+
+bill.knowledge.each do |k|
+  puts k
+end
+#puts "Steve just learned this important knowledge: '#{steve.knowledge.first}' from Avi"
+
+jim = User.new
+jim.first_name = "Jim"
+jim.last_name = "Morrison"
+#jim.learn(some_knowledge) #does not work because User does not have #learn
