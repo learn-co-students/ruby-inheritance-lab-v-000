@@ -4,7 +4,6 @@ class Teacher < User
 
   
   def teach
-  	KNOWLEDGE.shuffle.first
-  	# KNOWLEDGE.sample
+  	KNOWLEDGE.sample
   end
 end
