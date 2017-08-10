@@ -1,3 +1,4 @@
+require 'pry'
 #!/usr/bin/env ruby
 
 require_relative "../lib/user.rb"
@@ -12,9 +13,18 @@ avi = Teacher.new
 avi.first_name = "Avi"
 avi.last_name = "Flombaum"
 
-
-some_knowledge = avi.teach 
-
-steve.learn(some_knowledge)
+steve.learn(avi.teach)
+steve.learn(avi.teach)
+steve.learn(avi.teach)
+steve.learn(avi.teach)
 
 puts "Steve just learned this important knowledge: '#{steve.knowledge.first}' from Avi"
+
+tony = Student.new
+tony.first_name = "Tony"
+tony.last_name = "Mastrorio"
+
+tony.learn(avi.teach)
+tony.learn(avi.teach)
+
+binding.pry
