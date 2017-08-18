@@ -4,6 +4,10 @@ require_relative "../lib/user.rb"
 require_relative "../lib/teacher.rb"
 require_relative "../lib/student.rb"
 
+jim = Student.new
+jim.first_name = "Jim"
+jim.last_name = "Jones"
+
 steve = Student.new
 steve.first_name = "Steve"
 steve.last_name = "Jobs"
@@ -14,12 +18,25 @@ avi.last_name = "Flombaum"
 
 
 some_knowledge = avi.teach
+some_more_knowledge = avi.teach
 
-steve.learn(some_knowledge)
+jim.learn(some_knowledge)
+puts "Jim just learned this important knowledge: '#{jim.knowledge.first}' from Avi"
 
+steve.learn(some_more_knowledge)
 puts "Steve just learned this important knowledge: '#{steve.knowledge.first}' from Avi"
 
-We have a new user, Jim, who is just here to audit a few classes. He is neither a teacher nor a student. Create a local variable, jim, and point it equal to an instance of the User class. Then, give jim a first and last name. What happens when you try to call #learn on jim?
-Continue to operate on our student, steve. Have avi teach him some more important knowledge.
-Create a new student and have that student learn a few things from avi as well.
-Then, puts out the existing knowledge of each student.
+
+
+
+#puts "Jim knows this important knowledge: '#{jim.knowledge}'"
+#puts "Steve knows this important knowledge: '#{steve.knowledge}'"
+
+#We have a new user, Jim, who is just here to audit a few classes.
+#He is neither a teacher nor a student. Create a local variable, jim, and point
+#it equal to an instance of the User class. Then, give jim a first and last name.
+#What happens when you try to call #learn on jim?
+#Continue to operate on our student, steve. Have avi teach him some more
+#important knowledge.
+#Create a new student and have that student learn a few things from avi as well.
+#Then, puts out the existing knowledge of each student.
