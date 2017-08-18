@@ -13,8 +13,13 @@ avi.first_name = "Avi"
 avi.last_name = "Flombaum"
 
 
-some_knowledge = avi.teach 
+some_knowledge = avi.teach
 
 steve.learn(some_knowledge)
 
 puts "Steve just learned this important knowledge: '#{steve.knowledge.first}' from Avi"
+
+We have a new user, Jim, who is just here to audit a few classes. He is neither a teacher nor a student. Create a local variable, jim, and point it equal to an instance of the User class. Then, give jim a first and last name. What happens when you try to call #learn on jim?
+Continue to operate on our student, steve. Have avi teach him some more important knowledge.
+Create a new student and have that student learn a few things from avi as well.
+Then, puts out the existing knowledge of each student.
