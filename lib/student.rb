@@ -10,7 +10,6 @@ class Student < User
   end
 
   def knowledge
-    r = Random.new
-    @knowledge[r.rand(0..@knowledge.length-1)]
+    @knowledge
   end
 end
