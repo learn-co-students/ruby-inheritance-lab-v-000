@@ -29,4 +29,4 @@ puts "Steve just learned this important knowledge: '#{steve.knowledge.last}' fro
 
 puts "Bob just learned this important knowledge: '#{bob.knowledge.first}' from Avi"
 
-puts "Jim just learned this important knowledge: '#{jim.knowledge.first}' from Avi"
+puts "Jim just learned this important knowledge: '#{jim.knowledge.first}' from Avi" #Error since learn is not in the User class, but a method inside Student. 
