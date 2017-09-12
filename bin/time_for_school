@@ -13,8 +13,37 @@ avi.first_name = "Avi"
 avi.last_name = "Flombaum"
 
 
-some_knowledge = avi.teach 
+some_knowledge = avi.teach
 
 steve.learn(some_knowledge)
 
 puts "Steve just learned this important knowledge: '#{steve.knowledge.first}' from Avi"
+
+jim = User.new
+jim.first_name = "Jim"
+jim.last_name = "Parsons"
+
+#jim.learn(some_knowledge)
+#returns an undefined method error
+#learn is not a User class method
+
+next_knowledge = avi.teach
+steve.learn(next_knowledge)
+
+puts "Steve just learned this other important knowledge: '#{steve.knowledge[1]}' from Avi"
+
+beyonce = Student.new
+beyonce.first_name = "Beyonce"
+beyonce.last_name = "Knowles"
+
+some_knowledge
+beyonce.learn(some_knowledge)
+
+puts "Beyonce just learned this important knowledge: '#{beyonce.knowledge.first}' from Avi"
+
+last_knowledge = avi.teach
+beyonce.learn(last_knowledge)
+
+puts "Beyonce just learned this other important knowledge: '#{beyonce.knowledge[1]}' from Avi"
+puts "Steve learned all this important knowledge '#{steve.knowledge}' from Avi"
+puts "Beyonce learned all this important knowledge '#{beyonce.knowledge}' from Avi"
