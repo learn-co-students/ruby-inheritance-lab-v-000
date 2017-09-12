@@ -44,6 +44,6 @@ puts "Beyonce just learned this important knowledge: '#{beyonce.knowledge.first}
 last_knowledge = avi.teach
 beyonce.learn(last_knowledge)
 
-puts "Beyonce just learned this important knowledge: '#{beyonce.knowledge[1]}' from Avi"
+puts "Beyonce just learned this other important knowledge: '#{beyonce.knowledge[1]}' from Avi"
 puts "Steve learned all this important knowledge '#{steve.knowledge}' from Avi"
 puts "Beyonce learned all this important knowledge '#{beyonce.knowledge}' from Avi"
