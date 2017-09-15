@@ -3,7 +3,7 @@ class Student < User
   @@all = []
   def initialize
     @knowledge = []
-    @@all << self.first_name
+    @@all << self
   end
 
   def learn (learned)
@@ -12,6 +12,10 @@ class Student < User
 
   def knowledge
     @knowledge.dup.freeze
+  end
+
+  def self.all
+    @@all
   end
 
 end
