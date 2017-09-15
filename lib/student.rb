@@ -1,8 +1,9 @@
 require_relative "./user.rb"
 class Student < User
-
+  @@all = []
   def initialize
     @knowledge = []
+    @@all << self.first_name
   end
 
   def learn (learned)
