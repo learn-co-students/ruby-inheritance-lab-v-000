@@ -13,8 +13,19 @@ avi.first_name = "Avi"
 avi.last_name = "Flombaum"
 
 
-some_knowledge = avi.teach 
+some_knowledge = avi.teach
 
 steve.learn(some_knowledge)
 
 puts "Steve just learned this important knowledge: '#{steve.knowledge.first}' from Avi"
+
+bob = Student.new
+bob.first_name = "Bob"
+bob.last_name = "Bobson"
+
+bob.learn(some_knowledge)
+
+puts "#{bob.first_name} just learned this important knowledge: '#{bob.knowledge.first}' from Avi"
+
+steve.knowledge.each { |gem| puts gem }
+bob.knowledge.each { |gem| puts gem }
