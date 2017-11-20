@@ -8,13 +8,30 @@ steve = Student.new
 steve.first_name = "Steve"
 steve.last_name = "Jobs"
 
+bill = Student.new
+bill.first_name = "William"
+bill.last_name = "Doors"
+
 avi = Teacher.new
 avi.first_name = "Avi"
 avi.last_name = "Flombaum"
 
+jim = User.new
+jim.first_name = "Jim"
+jim.last_name = "Ray"
 
 some_knowledge = avi.teach 
 
 steve.learn(some_knowledge)
+steve.learn(avi.teach)
+#jim.learn(some_knowledge)
+
+bill.learn(avi.teach)
+bill.learn(avi.teach)
+bill.learn(avi.teach)
 
 puts "Steve just learned this important knowledge: '#{steve.knowledge.first}' from Avi"
+puts "Steve just learned some more important knowledge
+from Avi...namely: #{steve.knowledge[-1]}"
+puts "\nBill listened carefully and learned the following
+infos from Avi:\n#{bill.knowledge.join("; \n")}"
