@@ -12,9 +12,30 @@ avi = Teacher.new
 avi.first_name = "Avi"
 avi.last_name = "Flombaum"
 
+jim = User.new
+jim.first_name = "Jim"
+jim.last_name  = "Screechie"
 
-some_knowledge = avi.teach 
+penny = Student.new
+penny.first_name = "Penny"
+penny.last_name = "Proud"
+
+some_knowledge = avi.teach
+more_knowledge = avi.teach
+penny_knowledge = avi.teach
+penny_learnsmore = avi.teach
 
 steve.learn(some_knowledge)
+steve.learn(more_knowledge)
+
+# jim.learn(some_knowledge)
+
+penny.learn(penny_knowledge)
+penny.learn(penny_learnsmore)
 
 puts "Steve just learned this important knowledge: '#{steve.knowledge.first}' from Avi"
+puts "Steve just learned this from Avi too --'#{steve.knowledge[1]}'"
+puts
+puts "Steve knows #{ steve.knowledge.join(" and ") }"
+puts "Penny knows #{ penny.knowledge.join(" and ") }"
+puts "Thanks, Avi!"
