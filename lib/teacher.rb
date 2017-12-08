@@ -9,8 +9,7 @@ class Teacher < User
   def teach
     # this method should return a random string from the KNOWLEDGE contant array
     # how would you select a random portion from array? look up random number
-    KNOWLEDGE.sample
-      
+    KNOWLEDGE.sample  
   end 
   
 end
