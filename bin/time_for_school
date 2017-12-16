@@ -24,6 +24,7 @@ even_knowledge = avi.teach
 steve.learn(some_knowledge)
 steve.learn(even_knowledge)
 steve.learn(more_knowledge)
+steve.learn(avi.teach)
 
 jim.learn(even_knowledge)
 jim.learn(more_knowledge)
