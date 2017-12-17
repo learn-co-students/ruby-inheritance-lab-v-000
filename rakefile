@@ -1,0 +1,14 @@
+require_relative './config/environment'
+
+puts "Welcome to Authors, Stories and Categories"
+
+def reload!
+  load  './lib/user.rb'
+  load  './lib/student.rb'
+  load  './lib/teacher.rb'
+end
+
+desc "A console"
+task :console do
+  Pry.start
+end
