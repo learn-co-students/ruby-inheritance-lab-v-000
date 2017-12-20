@@ -13,8 +13,23 @@ avi.first_name = "Avi"
 avi.last_name = "Flombaum"
 
 
-some_knowledge = avi.teach 
+some_knowledge = avi.teach
 
 steve.learn(some_knowledge)
 
 puts "Steve just learned this important knowledge: '#{steve.knowledge.first}' from Avi"
+
+jim = User.new
+# jim.learn(some_knowledge) # => gives error!
+
+more_knowledge = avi.teach
+steve.learn(more_knowledge)
+
+zuckers = Student.new
+alpha = avi.teach
+beta = avi.teach
+zuckers.learn(alpha)
+zuckers.learn(beta)
+
+puts "steve has learned: #{steve.knowledge}"
+puts "zuckers has learned: #{zuckers.knowledge}"
