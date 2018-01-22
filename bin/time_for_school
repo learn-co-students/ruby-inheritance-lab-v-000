@@ -8,13 +8,27 @@ steve = Student.new
 steve.first_name = "Steve"
 steve.last_name = "Jobs"
 
+bill = Student.new
+bill.first_name = "William"
+bill.last_name = "Gates"
+
 avi = Teacher.new
 avi.first_name = "Avi"
 avi.last_name = "Flombaum"
 
+jim = User.new
+jim.first_name = "James"
+jim.last_name = "Dean"
 
-some_knowledge = avi.teach 
+
+
+
+some_knowledge = avi.teach
+some_other_knowledge = avi.teach
+# jim.learn(some_knowledge) #Jim can't learn because he is no a Student
 
 steve.learn(some_knowledge)
+bill.learn(some_other_knowledge)
 
 puts "Steve just learned this important knowledge: '#{steve.knowledge.first}' from Avi"
+puts "Bill just learned this important knowledge: '#{bill.knowledge.first}' from Avi"
