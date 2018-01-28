@@ -8,7 +8,7 @@ class Teacher < User
     end
 
     def teach
-		KNOWLEDGE.sample
+		KNOWLEDGE.sample    #note  .sample is a ruby method that chooses a random element from the array
     binding.pry
     end
 
