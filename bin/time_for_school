@@ -13,8 +13,32 @@ avi.first_name = "Avi"
 avi.last_name = "Flombaum"
 
 
-some_knowledge = avi.teach 
+some_knowledge = avi.teach
 
 steve.learn(some_knowledge)
 
+jim = User.new
+jim.first_name = "Jim"
+jim.last_name = "Smith"
+
 puts "Steve just learned this important knowledge: '#{steve.knowledge.first}' from Avi"
+
+#  jim.learn(some_knowledge) doesn't run bc a regular user doesn't have learn ability
+
+
+3.times do
+  some_knowledge = avi.teach
+  steve.learn(some_knowledge)
+end
+
+chely = Student.new
+chely.first_name = "Chely"
+chely.last_name = "Ho"
+
+3.times do
+  some_knowledge = avi.teach
+  chely.learn(some_knowledge)
+end
+
+puts "Steve just learned this important knowledge: '#{steve.knowledge[0...-1].join(", ")} and #{steve.knowledge.last}' from Avi"
+puts "Chely just learned this important knowledge: '#{chely.knowledge[0...-1].join(", ")} and #{chely.knowledge.last}' from Avi"
