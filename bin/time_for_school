@@ -23,3 +23,5 @@ jim = User.new
 jim.first_name = "Jim"
 jim.last_name = "Beam"
 puts jim.full_name
+
+#jim.learn.(some_knowledge) => undefined method 'learn' for User. No method error. 
