@@ -18,3 +18,34 @@ some_knowledge = avi.teach
 steve.learn(some_knowledge)
 
 puts "Steve just learned this important knowledge: '#{steve.knowledge.first}' from Avi"
+
+some_more_knowledge = avi.teach
+steve.learn(some_more_knowledge)
+puts "Steve learned some more important knowledge: '#{steve.knowledge.last}' from Avi"
+
+jim = Student.new
+jim.first_name = "Jim"
+jim.last_name = "John"
+
+other_knowledge = avi.teach
+steve.learn(other_knowledge)
+jim.learn(other_knowledge)
+puts "Jim just learned this important knowledge: '#{steve.knowledge[2]}' from Avi"
+
+more_other_knowledge = avi.teach
+steve.learn(more_other_knowledge)
+jim.learn(more_other_knowledge)
+
+jim.learn(more_other_knowledge)
+puts "Jim learned more important knowledge: '#{steve.knowledge[1]}' from Avi"
+
+puts steve.knowledge
+puts jim.knowledge
+
+
+
+# jim = User.new
+# jim.first_name = "Jim"
+# jim.last_name = "John"
+
+# jim.learn(some_knowledge)
