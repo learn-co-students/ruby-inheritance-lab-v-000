@@ -18,3 +18,19 @@ some_knowledge = avi.teach
 steve.learn(some_knowledge)
 
 puts "Steve just learned this important knowledge: '#{steve.knowledge.first}' from Avi"
+
+#jim = User.new 
+#first_name = "Jim"
+#last_name = "Trump"
+
+#jim.learn(some_knowledge)
+#Jim cannot learn anything because the User class does not have
+#a learn method defined.
+
+sandi = Student.new
+sandi.first_name = "Sandi"
+sandi.last_name = "Metz"
+
+sandi.learn(some_knowledge)
+
+puts "Sandi just learned this important knowledge: '#{sandi.knowledge.first}' from Avi"
