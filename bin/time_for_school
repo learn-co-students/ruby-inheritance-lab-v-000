@@ -26,7 +26,6 @@ some_more_knowledge = avi.teach
 steve.learn(some_knowledge)
 carl.learn(some_more_knowledge)
 
-# -->  Users cannot learn - jim.learn(some_knowledge)
 
 puts "Steve just learned this important knowledge: '#{steve.knowledge.first}' from Avi"
 puts "Carl just learned this important knowledge: '#{carl.knowledge.first}' from Avi"
