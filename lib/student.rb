@@ -15,7 +15,7 @@ class Student < User
     @last_name=last_name
   end
   
-  def student.new=Hash.new
+  
 
 end
 
