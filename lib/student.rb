@@ -1,4 +1,5 @@
 class Student < User
+  
   def first_name 
     @first_name
   end
@@ -14,8 +15,10 @@ class Student < User
   def last_name=(last_name)
     @last_name=last_name
   end
+  end
+  
   
   
 
-end
+
 
