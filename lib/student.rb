@@ -16,13 +16,16 @@ class Student < User
     @last_name=last_name
   end
   
-  def knowledge
+  def initialize 
     @knowledge=[]
   end
+  
+  def learn(knowledge)
+    @knowledge<<knowledge
+  end
+  
+  def knowledge 
+    @knowledge
+  end
 end
-  
-  
-  
-
-
 

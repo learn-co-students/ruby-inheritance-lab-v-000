@@ -24,7 +24,7 @@ describe "Teacher" do
 
   describe "#teach" do 
     it "returns a random string of knowledge" do 
-      expect(knowledge).to include(teacher.teach) 
+      expect(knowledge).to include(teacher.teach)
     end
   end
 end
