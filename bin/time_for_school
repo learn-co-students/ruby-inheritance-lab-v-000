@@ -12,7 +12,7 @@ avi = Teacher.new
 avi.first_name = "Avi"
 avi.last_name = "Flombaum"
 
-some_knowledge = avi.teach 
+some_knowledge = avi.teach
 
 steve.learn(some_knowledge)
 
@@ -24,10 +24,28 @@ jim.last_name = "Fall"
 
 steve.learn(some_knowledge)
 
-test = Student.new
-test.first_name = "Testy"
-test.last_name = "McTesterson
+tester = Student.new
+tester.first_name = "Testy"
+tester.last_name = "McTesterson"
 
-test.learn(some_knowledge)
+tester.learn(some_knowledge)
 
-puts "anything #{steve.knowledge}, #{jim.knowledge}, #{test.knowledge}"
+
+puts "Steve knows #{steve.knowledge}, and Testy knows #{tester.knowledge}"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# spacing
