@@ -30,22 +30,4 @@ tester.last_name = "McTesterson"
 
 tester.learn(some_knowledge)
 
-
 puts "Steve knows #{steve.knowledge}, and Testy knows #{tester.knowledge}"
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# spacing
