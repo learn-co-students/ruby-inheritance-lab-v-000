@@ -1,5 +1,5 @@
 class Student < User
-  
+
   attr_accessor :knowledge
 
   def initialize
@@ -8,6 +8,10 @@ class Student < User
 
   def learn(knowledge)
     @knowledge << knowledge
+  end
+
+  def knowledge
+    @knowledge
   end
 
 end
