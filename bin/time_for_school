@@ -18,3 +18,5 @@ some_knowledge = avi.teach
 steve.learn(some_knowledge)
 
 puts "Steve just learned this important knowledge: '#{steve.knowledge.first}' from Avi"
+
+puts "He also could hav learned this: '#{avi.teach}'! from Avi ... but did not "
