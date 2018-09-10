@@ -44,4 +44,5 @@ steve.knowledge.each {|piece_of_knowledge| puts piece_of_knowledge}
 puts"\n#{alan.first_name} #{alan.last_name} now knows:"
 alan.knowledge.each {|piece_of_knowledge| puts piece_of_knowledge}
 
-puts "\nWow! Avi has taught his students a lot! #{jim.first_name} #{jim.last_name} will give him a high mark for sure!"
+puts "\nWow! Avi has taught his students a lot!"
+puts "#{jim.first_name} #{jim.last_name} will give him a high mark for sure!"
