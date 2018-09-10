@@ -39,10 +39,22 @@ alan.learn(some_knowledge)
 alan.learn(some_more_important_knowledge)
 alan.learn(some_even_more_important_knowledge)
 
-puts "\n#{steve.first_name} #{steve.last_name} now knows:"
-steve.knowledge.each {|piece_of_knowledge| puts piece_of_knowledge}
-puts"\n#{alan.first_name} #{alan.last_name} now knows:"
-alan.knowledge.each {|piece_of_knowledge| puts piece_of_knowledge}
+bill = Student.new 
+bill.first_name = "Bill"
+bill.last_name = "Gates"
+bill.learn(avi.teach) #This simplifies things a LOT!
+
+#puts "\n#{steve.first_name} #{steve.last_name} now knows:"
+#steve.knowledge.each {|piece_of_knowledge| puts piece_of_knowledge}
+#puts"\n#{alan.first_name} #{alan.last_name} now knows:"
+#alan.knowledge.each {|piece_of_knowledge| puts piece_of_knowledge}
+
+[steve, alan, bill].each do |student|
+  puts "\n#{student.first_name} #{student.last_name} now knows:"
+  student.knowledge.each do |piece_of_knowledge|
+    puts piece_of_knowledge
+  end 
+end # This also simplifies things a lot, in the long run.
 
 puts "\nWow! Avi has taught his students a lot!"
 puts "#{jim.first_name} #{jim.last_name} will give him a high mark for sure!"
