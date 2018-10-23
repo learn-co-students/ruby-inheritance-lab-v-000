@@ -1,5 +1,3 @@
-require 'pry'
-
 class Student < User
 
   def initialize
@@ -14,5 +12,4 @@ class Student < User
   def knowledge
     @knowledge
   end
-    
 end
