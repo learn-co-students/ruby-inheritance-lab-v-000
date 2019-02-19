@@ -1,11 +1,4 @@
 class User
-  attr_accessor :first_name, :last_name, :knowledge
+  attr_accessor :first_name, :last_name
 
-  def initialize
-    @knowledge = []
-  end
-
-  def learn(new_knowledge)
-    @knowledge << new_knowledge
-  end
 end
