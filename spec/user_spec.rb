@@ -1,6 +1,6 @@
 require "spec_helper"
 
-   puts describe "User" do 
+   describe "User" do 
   let!(:user) { User.new }
   it "has a first name" do
     user.first_name = "Tracy"
