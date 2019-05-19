@@ -1,3 +1,4 @@
+
 #!/usr/bin/env ruby
 
 require_relative "../lib/user.rb"
@@ -8,13 +9,25 @@ steve = Student.new
 steve.first_name = "Steve"
 steve.last_name = "Jobs"
 
+jim = User.new
+jim.first_name = "Jimmy"
+jim.last_name = "Brown"
+
+laura = Student.new
+laura.first_name = "Laura"
+laura.last_name = "Spencer"
+
 avi = Teacher.new
 avi.first_name = "Avi"
 avi.last_name = "Flombaum"
 
 
-some_knowledge = avi.teach 
+some_knowledge = avi.teach
 
 steve.learn(some_knowledge)
+steve.learn(avi.teach)
+
+laura.learn(some_knowledge)
 
 puts "Steve just learned this important knowledge: '#{steve.knowledge.first}' from Avi"
+puts "Laura just learned this important knowledge: '#{laura.knowledge.first}' from Avi"
