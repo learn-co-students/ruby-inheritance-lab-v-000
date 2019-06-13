@@ -12,15 +12,15 @@ avi = Teacher.new
 avi.first_name = "Avi"
 avi.last_name = "Flombaum"
 
-jim = User.new
+jim = Student.new
 jim.first_name = "Jim"
 jim.last_name = "Bob"
 
-jim.learn(some_knowledge)
-
 some_knowledge = avi.teach
 
-steve.learn(some_knowledge)
+# steve.learn(some_knowledge)
 
-puts "Steve just learned this important knowledge: '#{steve.knowledge.first}' from Avi"
-puts "Jim just learned this important knowledge: '#{jim.knowledge.first}' from Avi"
+# jim.learn(some_knowledge)
+
+puts "Steve just learned this important knowledge: '#{steve.learn(some_knowledge).join}' from Avi"
+puts "Jim just learned this important knowledge: '#{jim.learn(some_knowledge).join}' from Avi"
