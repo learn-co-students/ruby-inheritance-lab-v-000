@@ -13,8 +13,22 @@ avi.first_name = "Avi"
 avi.last_name = "Flombaum"
 
 
-some_knowledge = avi.teach 
+some_knowledge = avi.teach
 
 steve.learn(some_knowledge)
 
 puts "Steve just learned this important knowledge: '#{steve.knowledge.first}' from Avi"
+
+
+
+steve.learn(some_knowledge)
+
+puts "Steve just learned: '#{steve.knowledge.first}' from Avi."
+
+sarah = Student.new
+sarah.first_name = "Sarah"
+sarah.last_name = "Lum"
+
+sarah.learn(some_knowledge)
+
+puts "Sarah Lum is learning: '#{sarah.knowledge.first}' from Avi."
