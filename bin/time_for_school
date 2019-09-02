@@ -12,9 +12,30 @@ avi = Teacher.new
 avi.first_name = "Avi"
 avi.last_name = "Flombaum"
 
+clay = Student.new
+clay.first_name = "Clayton"
+clay.last_name = "Hughes"
 
 some_knowledge = avi.teach 
+some_knowledge1 = avi.teach
+some_knowledge2 = avi.teach
 
-steve.learn(some_knowledge)
+#puts some_knowledge #random element from knowledge array
 
-puts "Steve just learned this important knowledge: '#{steve.knowledge.first}' from Avi"
+steve.learn(some_knowledge) #add random element to steves knowledgearray
+
+steve.learn(some_knowledge1)
+steve.learn(some_knowledge2)
+
+clay.learn(some_knowledge)
+clay.learn(some_knowledge1)
+clay.learn(some_knowledge2)
+
+puts "Steve just learned this important knowledge: '#{steve.knowledge}' from Avi"
+
+puts "Clayton just learned this important knowledge: '#{clay.knowledge}' from Avi"
+
+jim=User.new
+jim.first_name = "Jim"
+jim.last_name = "Jones"
+#puts jim.learn calling learn on jim results in an error because user doesn't inherit from the student class which contains the learn method
