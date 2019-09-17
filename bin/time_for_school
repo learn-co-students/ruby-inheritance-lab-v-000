@@ -4,6 +4,10 @@ require_relative "../lib/user.rb"
 require_relative "../lib/teacher.rb"
 require_relative "../lib/student.rb"
 
+jim = User.new
+jim.first_name = "Jim"
+jim.last_name = "Mesfun"
+
 steve = Student.new
 steve.first_name = "Steve"
 steve.last_name = "Jobs"
@@ -13,7 +17,7 @@ avi.first_name = "Avi"
 avi.last_name = "Flombaum"
 
 
-some_knowledge = avi.teach 
+some_knowledge = avi.teach
 
 steve.learn(some_knowledge)
 
