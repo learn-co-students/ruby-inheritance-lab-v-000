@@ -12,9 +12,34 @@ avi = Teacher.new
 avi.first_name = "Avi"
 avi.last_name = "Flombaum"
 
+more_knowldege = "intro to inheritance and passed the labs"
 
 some_knowledge = avi.teach 
 
 steve.learn(some_knowledge)
 
 puts "Steve just learned this important knowledge: '#{steve.knowledge.first}' from Avi"
+
+more_knowledge = avi.teach 
+
+steve.learn(more_knowldege)
+
+puts "Steve also learned about '#{steve.knowledge.last}'"
+
+jim = Student.new
+jim.first_name = "Jim" 
+jim.last_name = "Beam"
+
+more_knowldege = "intro to inheritance and passed the labs"
+
+some_knowledge = avi.teach 
+
+jim.learn(some_knowledge)
+
+puts "jim just learned this important knowledge: '#{jim.knowledge.first}' from Avi"
+
+more_knowledge = avi.teach 
+
+jim.learn(more_knowldege)
+
+puts "jim also learned about '#{jim.knowledge.last}'"
