@@ -12,9 +12,25 @@ avi = Teacher.new
 avi.first_name = "Avi"
 avi.last_name = "Flombaum"
 
+jim = User.new
+jim.first_name = "Jim"
+jim.last_name = "Halpert"
 
 some_knowledge = avi.teach 
 
+#jim.learn(some_knowledge) -- NoMethodError, User class doesn't have access to student instance methods
+
 steve.learn(some_knowledge)
 
+pam = Student.new
+pam.first_name = "Pam"
+pam.last_name = "Beasley"
+
+3.times do
+  some_knowledge = avi.teach 
+  pam.learn(some_knowledge)
+  steve.learn(some_knowledge)
+end
+
 puts "Steve just learned this important knowledge: '#{steve.knowledge.first}' from Avi"
+puts "Pam just learned this important knowledge: '#{pam.knowledge.first}' from Avi"
